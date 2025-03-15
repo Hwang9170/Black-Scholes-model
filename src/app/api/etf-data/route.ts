@@ -22,7 +22,14 @@ export async function GET() {
     { sector: 'Large Cap', etf: 'SPY', holdings: ['AAPL', 'MSFT', 'AMZN'] },
   ];
 
-  const result: any[] = [];
+  type EtfResult = {
+    sector: string;
+    etf: string;
+    optionPrice: number;
+    topHoldings: string[];
+  };
+  
+  const result: EtfResult[] = [];
   const endDate = new Date();
   const startDate = subDays(endDate, 30);
 
