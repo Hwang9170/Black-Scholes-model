@@ -77,7 +77,7 @@ d₂ = d₁ - σ√T
         <div className="flex justify-center items-center h-[300px] animate-pulse">
           <div className="text-center">
             <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-            <p className="text-gray-400">데이터 로딩 중입니다... 잠시만 기다려 주세요 🕐</p>
+            <p className="text-gray-400">데이터 로딩 중입니다... 잠시만 기다려 주세요구르트</p>
           </div>
         </div>
       ) : (
