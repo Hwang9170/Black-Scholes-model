@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Legend, CartesianGrid } from "recharts";
 
 // 🎯 ETF 데이터 타입 정의
 type EtfItem = {
@@ -72,29 +71,12 @@ d₂ = d₁ - σ√T
         </div>
       </div>
 
-      {/* 📈 시각화 차트 */}
-      {!loading && (
-        <div className="max-w-5xl mx-auto mb-16">
-          <h3 className="text-lg sm:text-xl font-semibold mb-4 text-center">📈 ETF 옵션 가격 비교 차트</h3>
-          <ResponsiveContainer width="100%" height={320}>
-            <BarChart data={data} margin={{ top: 20, right: 30, left: 10, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-              <XAxis dataKey="etf" stroke="#ccc" />
-              <YAxis stroke="#ccc" />
-              <Tooltip cursor={{ fill: 'rgba(255,255,255,0.1)' }} contentStyle={{ backgroundColor: '#222', borderRadius: '10px', border: 'none', color: 'white' }} />
-              <Legend wrapperStyle={{ color: 'white' }} />
-              <Bar dataKey="optionPrice" fill="#38bdf8" radius={[6, 6, 0, 0]} name="Option Price ($)" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      )}
-
       {/* 🕐 로딩 애니메이션 */}
       {loading ? (
         <div className="flex justify-center items-center h-[300px] animate-pulse">
           <div className="text-center">
             <div className="w-12 h-12 border-4 border-white border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-            <p className="text-gray-400">데이터 로딩 중입니다... <br />잠시만 기다려 주세요</p>
+            <p className="text-gray-400">데이터 로딩 중입니다... <br></br>잠시만 기다려 주세요구르트</p>
           </div>
         </div>
       ) : (
